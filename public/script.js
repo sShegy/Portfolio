@@ -204,3 +204,20 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',
   }
   scramble(original);
 })();
+
+
+// Hero angled bands gentle parallax (disabled for reduced motion)
+(function(){
+  const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const hero = document.querySelector('.hero');
+  if (!hero || prefersReduced) return;
+  function onScroll(){
+    const r = hero.getBoundingClientRect();
+    if (r.bottom <= 0 || r.top >= window.innerHeight) return;
+    const p = Math.max(0, Math.min(1, 1 - r.top / window.innerHeight));
+    document.documentElement.style.setProperty('--band-x', ((p - 0.5) * 80).toFixed(1) + 'px');
+    document.documentElement.style.setProperty('--band-y', ((p - 0.5) * 50).toFixed(1) + 'px');
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();
