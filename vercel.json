@@ -3,7 +3,14 @@
   "builds": [
     { "src": "public/**", "use": "@vercel/static" }
   ],
+  "cleanUrls": true,
   "routes": [
+    {
+      "src": "/(.*)",
+      "has": [{ "type": "host", "value": "shegyportfolio.com" }],
+      "status": 308,
+      "headers": { "Location": "https://www.shegyportfolio.com/$1" }
+    },
     { "src": "/(.*)", "dest": "/public/$1" }
   ]
 }
