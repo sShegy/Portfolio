@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>404 — Page not found</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <style>
+    main{min-height:60vh; display:grid; place-items:center; text-align:center}
+    .ghost{font-size:72px; opacity:.7}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="logo">YN</a>
+</header>
+<main>
+  <div>
+    <div class="ghost">👻</div>
+    <h1>Page not found</h1>
+    <p>Sorry, we couldn't find the page you're looking for.</p>
+    <p><a class="btn primary" href="/">Go back home</a></p>
+  </div>
+</main>
+<footer class="site-footer">
+  <p>© <span id="year"></span> Your Name.</p>
+</footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+</body>
+</html>

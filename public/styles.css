@@ -1,0 +1,152 @@
+:root{--bg: #0b0c10;--surface:#111218;--text:#e6e6e6;--muted:#a0a0a0;--primary:#6c5ce7;--primary-2:#a29bfe;--card:#151722;--border:#232538;--shadow:0 10px 30px rgba(0,0,0,.35)}
+@media (prefers-color-scheme: light){:root{--bg:#f8fafc;--surface:#ffffff;--text:#0f172a;--muted:#475569;--primary:#4f46e5;--primary-2:#6366f1;--card:#ffffff;--border:#e2e8f0;--shadow:0 8px 24px rgba(2,6,23,.08)}}
+*{box-sizing:border-box}
+html,body{padding:0;margin:0}
+body{font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; background:var(--bg); color:var(--text); line-height:1.6}
+img{max-width:100%; display:block}
+
+.site-header{position:sticky; top:0; z-index:20; display:flex; align-items:center; justify-content:space-between; gap:16px; padding:16px 20px; background:color-mix(in oklab, var(--bg) 85%, transparent); backdrop-filter:saturate(1.5) blur(8px); border-bottom:1px solid var(--border)}
+.logo{font-weight:800; letter-spacing:.5px; text-decoration:none; color:var(--text)}
+.nav{display:flex; align-items:center; gap:16px}
+.nav a{color:var(--text); text-decoration:none; opacity:.9; position:relative}
+.nav a::after{content:""; position:absolute; left:0; bottom:-3px; width:0; height:2px; background:currentColor; opacity:.6; transition:width .25s ease}
+.nav a:hover{opacity:1}
+.nav a:hover::after{width:100%}
+.nav .btn.primary{margin-left:8px}
+.nav-toggle{display:none; background:none; border:none; color:var(--text); font-size:22px}
+.theme-toggle{background:none; border:1px solid var(--border); color:var(--text); padding:6px 10px; border-radius:8px}
+
+.hero{display:grid; grid-template-columns: 1.2fr .8fr; gap:24px; align-items:center; padding:60px 20px; max-width:1100px; margin:0 auto}
+.hero .eyebrow{letter-spacing:.1em; text-transform:uppercase; color:var(--muted); font-size:13px; margin:0}
+.hero h1{font-size:48px; line-height:1.1; margin:8px 0 10px}
+.hero .subtitle{font-size:18px; color:var(--muted); margin:0 0 20px}
+.cta-group{display:flex; gap:12px; flex-wrap:wrap}
+.socials{margin-top:14px; display:flex; gap:12px}
+.socials a{color:var(--muted); text-decoration:none; position:relative}
+.socials a::after{content:""; position:absolute; left:0; bottom:-2px; width:0; height:1px; background:currentColor; opacity:.5; transition:width .25s ease}
+.socials a:hover::after{width:100%}
+.hero-visual{position:relative; height:280px}
+.blob{position:absolute; inset:0; background: radial-gradient(650px 300px at 70% 30%, color-mix(in oklab, var(--primary) 45%, transparent) 0%, transparent 70%), radial-gradient(450px 260px at 30% 70%, color-mix(in oklab, var(--primary-2) 45%, transparent) 0%, transparent 70%); filter:blur(20px); border-radius:24px; animation: blobFloat 12s ease-in-out infinite alternate, hueShift 20s linear infinite alternate}
+@keyframes hueShift{0%{filter: blur(20px) hue-rotate(0deg)}100%{filter: blur(20px) hue-rotate(25deg)}}
+@keyframes blobFloat{0%{transform:translate3d(-8px, -6px, 0) scale(1)}50%{transform:translate3d(6px, 4px, 0) scale(1.03)}100%{transform:translate3d(10px, -4px, 0) scale(1)} }
+
+.section{padding:60px 20px; max-width:1100px; margin:0 auto}
+.section.alt{background:linear-gradient(180deg, transparent, color-mix(in oklab, var(--surface) 85%, transparent))}
+.section-header h2{margin:0 0 8px}
+.section-header p{margin:0 0 24px; color:var(--muted)}
+.grid{display:grid; gap:20px}
+.grid.projects{grid-template-columns: repeat(3, 1fr)}
+.grid.two{grid-template-columns: repeat(2, 1fr)}
+
+.card{background:var(--card); border:1px solid var(--border); border-radius:14px; overflow:hidden; box-shadow:var(--shadow); transform:translateZ(0); transition: transform .25s ease, box-shadow .25s ease}
+.card:hover{transform: translateY(-6px)}
+.card img{aspect-ratio: 16/9; object-fit:cover; transition: transform .5s ease}
+.card:hover img{transform:scale(1.03)}
+.card-body{padding:14px}
+.card-body h3{margin:0 0 6px}
+.card-body p{margin:0 0 12px; color:var(--muted)}
+.tags{display:flex; flex-wrap:wrap; gap:8px; margin-bottom:10px}
+.tags span{font-size:12px; padding:4px 8px; border:1px solid var(--border); border-radius:999px; color:var(--muted)}
+.links{display:flex; gap:10px}
+
+.about{display:grid; grid-template-columns: 280px 1fr; gap:20px; align-items:start}
+.about img{border-radius:12px; transform:translateZ(0); transition: transform .4s ease}
+.about img:hover{transform: translateY(-4px)}
+
+.skills{display:flex; flex-wrap:wrap; gap:10px; padding:0; list-style:none}
+.skills li{padding:8px 12px; border:1px solid var(--border); border-radius:999px; background:var(--card); transition: transform .2s ease}
+.skills li:hover{transform: translateY(-2px)}
+
+.contact-form{display:grid; gap:14px}
+.contact-form label{display:grid; gap:6px}
+.contact-form input, .contact-form textarea{padding:10px 12px; background:var(--surface); color:var(--text); border:1px solid var(--border); border-radius:10px; outline:none; transition:border-color .2s ease, box-shadow .2s ease}
+.contact-form input:focus, .contact-form textarea:focus{border-color: color-mix(in oklab, var(--primary) 60%, var(--border)); box-shadow:0 0 0 4px color-mix(in oklab, var(--primary) 15%, transparent)}
+
+.btn{display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:10px 14px; border-radius:10px; border:1px solid var(--border); background:var(--surface); color:var(--text); text-decoration:none; transition: transform .15s ease, box-shadow .15s ease, background .2s ease}
+.btn:hover{transform: translateY(-2px)}
+.btn.primary{background:var(--primary); border-color: color-mix(in oklab, var(--primary) 80%, var(--border)); color:white}
+.btn.small{padding:6px 10px; font-size:14px}
+
+/* Reveal on scroll */
+.reveal{opacity:0; transform: translateY(12px); transition: opacity .6s ease, transform .6s ease}
+.reveal.revealed{opacity:1; transform: translateY(0)}
+
+.site-footer{padding:24px 20px; border-top:1px solid var(--border); color:var(--muted); text-align:center}
+
+/* Responsive */
+@media (max-width: 960px){
+  .hero{grid-template-columns: 1fr; padding-top:36px}
+  .hero-visual{order:-1; height:160px}
+  .grid.projects{grid-template-columns: repeat(2, 1fr)}
+  .about{grid-template-columns: 1fr}
+}
+@media (max-width: 640px){
+  .nav{position:fixed; inset:auto 12px 12px 12px; padding:12px; border-radius:12px; background:var(--surface); border:1px solid var(--border); box-shadow:var(--shadow); transform:translateY(16px); opacity:0; pointer-events:none; transition:.2s ease}
+  .nav.open{transform:translateY(0); opacity:1; pointer-events:auto}
+  .nav a{display:block; padding:8px 6px}
+  .nav .btn.primary{display:block}
+  .nav-toggle{display:inline-flex}
+  .grid.projects{grid-template-columns: 1fr}
+}
+
+/* Motion reduction */
+@media (prefers-reduced-motion: reduce){
+  *, *::before, *::after{animation: none !important; transition: none !important}
+}
+
+/* Dark mode manual toggle support */
+:root[data-theme="dark"]{--bg: #0b0c10;--surface:#111218;--text:#e6e6e6;--muted:#a0a0a0;--primary:#6c5ce7;--primary-2:#a29bfe;--card:#151722;--border:#232538;--shadow:0 10px 30px rgba(0,0,0,.35)}
+:root[data-theme="light"]{--bg:#f8fafc;--surface:#ffffff;--text:#0f172a;--muted:#475569;--primary:#4f46e5;--primary-2:#6366f1;--card:#ffffff;--border:#e2e8f0;--shadow:0 8px 24px rgba(2,6,23,.08)}
+
+/* Fix selector specificity: ensure correct :root theme overrides */
+:root[data-theme="dark"]{--bg: #0b0c10;--surface:#111218;--text:#e6e6e6;--muted:#a0a0a0;--primary:#6c5ce7;--primary-2:#a29bfe;--card:#151722;--border:#232538;--shadow:0 10px 30px rgba(0,0,0,.35)}
+:root[data-theme="light"]{--bg:#f8fafc;--surface:#ffffff;--text:#0f172a;--muted:#475569;--primary:#4f46e5;--primary-2:#6366f1;--card:#ffffff;--border:#e2e8f0;--shadow:0 8px 24px rgba(2,6,23,.08)}
+
+/* Spectacular enhancements */
+/* Card shine sweep */
+.card{position:relative}
+.card::after{content:""; position:absolute; inset:0; background:linear-gradient(120deg, rgba(255,255,255,0) 30%, rgba(255,255,255,.18) 50%, rgba(255,255,255,0) 70%); transform: translateX(-150%); transition: transform .6s ease; pointer-events:none}
+.card:hover::after{transform: translateX(150%)}
+
+/* Subtle particle field over hero visual */
+.hero-visual::before{content:""; position:absolute; inset:0; border-radius:24px; background-image: radial-gradient(rgba(255,255,255,.18) 1px, transparent 1.2px); background-size: 34px 34px; opacity:.08; animation: starsMove 40s linear infinite}
+@keyframes starsMove{from{background-position:0 0} to{background-position:200px 160px}}
+
+/* Slight floating for hero content */
+.hero .hero-content{will-change: transform}
+
+/* Stagger helper class (used by JS) */
+.stagger > *{transition-delay: var(--stagger, 0ms)}
+
+/* Stronger motion reduction safety */
+@media (prefers-reduced-motion: reduce){
+  .card::after{display:none}
+  .hero-visual::before{animation: none}
+}
+
+/* Correct theme overrides to ensure manual toggle works */
+html:root[data-theme="dark"]{--bg: #0b0c10;--surface:#111218;--text:#e6e6e6;--muted:#a0a0a0;--primary:#6c5ce7;--primary-2:#a29bfe;--card:#151722;--border:#232538;--shadow:0 10px 30px rgba(0,0,0,.35)}
+html:root[data-theme="light"]{--bg:#f8fafc;--surface:#ffffff;--text:#0f172a;--muted:#475569;--primary:#4f46e5;--primary-2:#6366f1;--card:#ffffff;--border:#e2e8f0;--shadow:0 8px 24px rgba(2,6,23,.08)}
+
+/* Theme view-transition animations */
+:root{view-transition-name: root}
+::view-transition-old(root),
+::view-transition-new(root){animation: none}
+html.theme-wipe-radial::view-transition-new(root){
+  clip-path: circle(0% at var(--cx, 50%) var(--cy, 50%));
+  animation: vt-reveal-radial var(--vt-dur, 700ms) ease-out forwards;
+}
+html.theme-wipe-linear::view-transition-new(root){
+  clip-path: polygon(0 0, 0 100%, 0 100%, 0 0);
+  transform-origin: var(--cx, 50%) var(--cy, 50%);
+  animation: vt-reveal-linear var(--vt-dur, 700ms) ease-out forwards;
+}
+@keyframes vt-reveal-radial{to{clip-path: circle(150% at var(--cx, 50%) var(--cy, 50%))}}
+@keyframes vt-reveal-linear{to{clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0)}}
+
+/* Fallback overlay fade/zoom when View Transitions not available */
+html.theme-fade::before{content:""; position:fixed; inset:0; background: var(--bg); opacity:0; transform: scale(.98); pointer-events:none; z-index:9999; animation: themeFade var(--vt-dur, 700ms) ease-out}
+@keyframes themeFade{0%{opacity:0; transform:scale(.98)} 50%{opacity:.12} 100%{opacity:0; transform:scale(1)}}
+
+/* Scroll progress bar */
+body::before{content:""; position:fixed; top:0; left:0; height:3px; width:100%; background: linear-gradient(90deg, var(--primary), var(--primary-2)); transform-origin: 0 0; transform: scaleX(var(--scroll, 0)); z-index:9999;}

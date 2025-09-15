@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Milan Šegan — Portfolio</title>
+  <meta name="description" content="Portfolio of Your Name — Developer/Designer. Projects, skills, and contact information." />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+<header class="site-header">
+  <a href="#" class="logo">YN</a>
+  <nav class="nav" id="nav">
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#about">About</a>
+    <a href="#contact" class="btn primary">Contact</a>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">🌓</button>
+  </nav>
+  <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="nav">☰</button>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-content">
+      <p class="eyebrow">Hello, I'm</p>
+      <h1>Milan Šegan</h1>
+      <p class="subtitle">Frontend Developer crafting delightful, accessible web experiences.</p>
+      <div class="cta-group">
+        <a href="#projects" class="btn primary">View Projects</a>
+        <a href="/YourName_Resume.pdf" class="btn" target="_blank" rel="noopener">Download Resume</a>
+      </div>
+      <div class="socials">
+        <a aria-label="GitHub" href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
+        <a aria-label="LinkedIn" href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener">LinkedIn</a>
+        <a aria-label="Email" href="mailto:you@example.com">Email</a>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="blob"></div>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <div class="section-header">
+      <h2>Featured Projects</h2>
+      <p>A selection of things I've built recently.</p>
+    </div>
+    <div class="grid projects">
+      <article class="card project">
+        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop" alt="Project screenshot" loading="lazy" />
+        <div class="card-body">
+          <h3>Project One</h3>
+          <p>Responsive dashboard with charts and real-time updates.</p>
+          <div class="tags"><span>React</span><span>Node</span><span>WebSockets</span></div>
+          <div class="links">
+            <a href="#" class="btn small">Live</a>
+            <a href="#" class="btn small">Code</a>
+          </div>
+        </div>
+      </article>
+      <article class="card project">
+        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop" alt="Project screenshot" loading="lazy" />
+        <div class="card-body">
+          <h3>Project Two</h3>
+          <p>Accessible design system with theming and tokens.</p>
+          <div class="tags"><span>TypeScript</span><span>Storybook</span><span>CSS</span></div>
+          <div class="links">
+            <a href="#" class="btn small">Docs</a>
+            <a href="#" class="btn small">Code</a>
+          </div>
+        </div>
+      </article>
+      <article class="card project">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop" alt="Project screenshot" loading="lazy" />
+        <div class="card-body">
+          <h3>Project Three</h3>
+          <p>AI-assisted productivity app with offline-first support.</p>
+          <div class="tags"><span>PWA</span><span>IndexedDB</span><span>AI</span></div>
+          <div class="links">
+            <a href="#" class="btn small">Live</a>
+            <a href="#" class="btn small">Code</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="skills" class="section alt">
+    <div class="section-header">
+      <h2>Skills</h2>
+      <p>Technologies and tools I work with.</p>
+    </div>
+    <ul class="skills">
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>JavaScript</li>
+      <li>TypeScript</li>
+      <li>React</li>
+      <li>Node.js</li>
+      <li>Express</li>
+      <li>REST APIs</li>
+      <li>Accessibility (a11y)</li>
+      <li>Testing</li>
+    </ul>
+  </section>
+
+  <section id="about" class="section">
+    <div class="section-header">
+      <h2>About</h2>
+      <p>A bit about me and how I work.</p>
+    </div>
+    <div class="about">
+      <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=600&auto=format&fit=crop" alt="Portrait of Your Name" loading="lazy" />
+      <div>
+        <p>I’m a frontend developer with a passion for building fast, accessible, and user‑friendly interfaces. I enjoy translating complex problems into elegant solutions and collaborating with cross‑functional teams.</p>
+        <p>When I’m not coding, you can find me exploring coffee spots, reading about design, or contributing to open‑source.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section alt">
+    <div class="section-header">
+      <h2>Contact</h2>
+      <p>Have an opportunity or just want to say hi? Let’s talk.</p>
+    </div>
+    <form class="contact-form" name="contact" netlify>
+      <div class="grid two">
+        <label>
+          <span>Name</span>
+          <input required name="name" autocomplete="name" />
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" required name="email" autocomplete="email" />
+        </label>
+      </div>
+      <label>
+        <span>Message</span>
+        <textarea required name="message" rows="6"></textarea>
+      </label>
+      <button class="btn primary" type="submit">Send</button>
+    </form>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Milan Šegan. All rights reserved.</p>
+</footer>
+
+<script src="/script.js"></script>
+</body>
+</html>
