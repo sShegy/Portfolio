@@ -8,7 +8,7 @@ navToggle?.addEventListener('click', () => {
 
 // Close nav on link click (mobile)
 nav?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-  if (getComputedStyle(navToggle).display !== 'none') {
+  if (navToggle && getComputedStyle(navToggle).display !== 'none') {
     nav.classList.remove('open');
     navToggle.setAttribute('aria-expanded', 'false');
   }
