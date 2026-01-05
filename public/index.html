@@ -3,20 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Milan Šegan — Portfolio</title>
-  <meta name="description" content="Portfolio of Your Name — Developer/Designer. Projects, skills, and contact information." />
+  <title>Milan Šegan — Backend Developer</title>
+  <meta name="description" content="Portfolio of Milan Šegan — Backend Developer specializing in Java, Python, and Systems Programming." />
   <meta name="color-scheme" content="light dark" />
   <link rel="icon" href="/favicon.ico" />
   <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
 <header class="site-header">
-  <a href="#" class="logo">MŠ</a>
+  <a href="#" class="logo">Milan Šegan</a>
   <nav class="nav" id="nav">
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#about">About</a>
-    <a href="#contact" class="btn primary">Contact</a>
+    <a href="#projects">Projekti</a>
+    <a href="#skills">Veštine</a>
+    <a href="#about">O meni</a>
+    <a href="#contact" class="btn primary">Kontakt</a>
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">🌓</button>
   </nav>
   <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="nav">☰</button>
@@ -25,70 +25,67 @@
 <main>
   <section class="hero">
     <div class="hero-content">
-      <p class="eyebrow">Hello, I'm</p>
+      <p class="eyebrow">Zdravo, ja sam</p>
       <h1>Milan Šegan</h1>
-      <p class="subtitle">Frontend Developer crafting delightful, accessible web experiences.</p>
+      <p class="subtitle">Backend Developer specijalizovan za sisteme visokih performansi i skalabilne arhitekture.</p>
       <div class="cta-group">
-        <a href="#projects" class="btn primary">View Projects</a>
-        <a href="/YourName_Resume.pdf" class="btn" target="_blank" rel="noopener">Download Resume</a>
+        <a href="#projects" class="btn primary">Projekti</a>
+        <a href="https://github.com/sShegy" class="btn" target="_blank" rel="noopener">GitHub Profil</a>
       </div>
       <div class="socials">
         <a aria-label="GitHub" href="https://github.com/sShegy" target="_blank" rel="noopener">GitHub</a>
-        <a aria-label="LinkedIn" href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener">LinkedIn</a>
+        <a aria-label="LinkedIn" href="https://linkedin.com/in/milansegan" target="_blank" rel="noopener">LinkedIn</a>
         <a aria-label="Email" href="mailto:milansegan55@gmail.com">Email</a>
       </div>
     </div>
     <div class="hero-visual" aria-hidden="true">
       <div class="blob"></div>
       <div class="tiles" aria-hidden="true">
-        <span class="tile t1">JS</span>
-        <span class="tile t2">TS</span>
-        <span class="tile t3">UX</span>
-        <span class="tile t4">API</span>
-        <span class="tile t5">CI</span>
+        <span class="tile t1">Java</span>
+        <span class="tile t2">Python</span>
+        <span class="tile t3">C/C++</span>
+        <span class="tile t4">SQL</span>
+        <span class="tile t5">API</span>
       </div>
     </div>
   </section>
 
   <section id="projects" class="section">
     <div class="section-header">
-      <h2>Featured Projects</h2>
-      <p>A selection of things I've built recently.</p>
+      <h2>Istaknuti Projekti</h2>
+      <p>Kolekcija backend sistema, DSL-ova i implementacija niskog nivoa.</p>
     </div>
     <div class="grid projects">
       <article class="card project project--violet project--half project--uniq-a">
-        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop" alt="Project screenshot" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc51?q=80&w=1200&auto=format&fit=crop" alt="Database representation" loading="lazy" />
         <div class="card-body">
-          <h3>Project One</h3>
-          <p>Responsive dashboard with charts and real-time updates.</p>
-          <div class="tags"><span>React</span><span>Node</span><span>WebSockets</span></div>
+          <h3>raf-simpledb</h3>
+          <p>Implementacija relacionog baze podataka fokusirana na DBMS principe.</p>
+          <div class="tags"><span>Java</span><span>DBMS</span><span>Algorithms</span></div>
           <div class="links">
-            <a href="#" class="btn small">Live</a>
-            <a href="#" class="btn small">Code</a>
+            <a href="https://github.com/sShegy/raf-simpledb" class="btn small" target="_blank" rel="noopener">Code</a>
           </div>
         </div>
       </article>
       <article class="card project project--cyan project--half project--uniq-b">
-        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop" alt="Project screenshot" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1518433278983-062df35582a1?q=80&w=1200&auto=format&fit=crop" alt="DSL representation" loading="lazy" />
         <div class="card-body">
-          <h3>Project Two</h3>
-          <p>Accessible design system with theming and tokens.</p>
-          <div class="tags"><span>TypeScript</span><span>Storybook</span><span>CSS</span></div>
+          <h3>Smart Home DSL</h3>
+          <p>Domain Specific Language za automatizaciju doma.</p>
+          <div class="tags"><span>Java</span><span>DSL</span><span>Automation</span></div>
           <div class="links">
-            <a href="#" class="btn small">Docs</a>
-            <a href="#" class="btn small">Code</a>
+            <a href="https://github.com/sShegy/Smart_Home_Automation_DSL" class="btn small" target="_blank" rel="noopener">Code</a>
           </div>
         </div>
       </article>
       <article class="card project project--rose project--half project--uniq-c">
-        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop" alt="Project screenshot" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&w=1200&auto=format&fit=crop" alt="System architecture" loading="lazy" />
         <div class="card-body">
-          <h3>Project Three</h3>
-          <p>AI-assisted productivity app with offline-first support.</p>
-          <div class="tags"><span>PWA</span><span>IndexedDB</span><span>AI</span></div>
+          <h3>StudSluzba</h3>
+          <p>Sistem za upravljanje studentskom službom sa klijent-server arhitekturom.</p>
+          <div class="tags"><span>Java</span><span>Client-Server</span><span>PostgreSQL</span></div>
           <div class="links">
-            <a href="#" class="btn small">Live</a>
-            <a href="#" class="btn small">Code</a>
+            <a href="https://github.com/sShegy/studsluzba-common" class="btn small" target="_blank" rel="noopener">Code</a>
           </div>
         </div>
       </article>
@@ -97,46 +94,46 @@
 
   <section id="skills" class="section alt">
     <div class="section-header">
-      <h2>Skills</h2>
-      <p>Technologies and tools I work with.</p>
+      <h2>Veštine</h2>
+      <p>Tehnička ekspertiza u backend razvoju i sistemskom programiranju.</p>
     </div>
     <ul class="skills icons">
-      <li data-short="HTML">HTML5</li>
-      <li data-short="CSS">CSS3</li>
-      <li data-short="JS">JavaScript</li>
-      <li data-short="TS">TypeScript</li>
-      <li data-short="⚛">React</li>
-      <li data-short="Node">Node.js</li>
-      <li data-short="Ex">Express</li>
-      <li data-short="API">REST APIs</li>
-      <li data-short="A11y">Accessibility (a11y)</li>
-      <li data-short="Test">Testing</li>
+      <li data-short="Java">Java</li>
+      <li data-short="Python">Python</li>
+      <li data-short="C">C / C++</li>
+      <li data-short="SQL">SQL (PostgreSQL)</li>
+      <li data-short="API">RESTful APIs</li>
+      <li data-short="Git">Git & GitHub</li>
+      <li data-short="Linux">Linux & Shell</li>
+      <li data-short="Docker">Docker</li>
+      <li data-short="Alg">Algorithms</li>
+      <li data-short="Sys">Systems</li>
     </ul>
   </section>
 
   <section id="about" class="section">
     <div class="section-header">
-      <h2>About</h2>
-      <p>A bit about me and how I work.</p>
+      <h2>O meni</h2>
+      <p>Iza koda.</p>
     </div>
     <div class="about">
-      <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=600&auto=format&fit=crop" alt="Portrait of Your Name" loading="lazy" />
+      <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop" alt="Portrait of Milan Šegan" loading="lazy" />
       <div>
-        <p>I’m a frontend developer with a passion for building fast, accessible, and user‑friendly interfaces. I enjoy translating complex problems into elegant solutions and collaborating with cross‑functional teams.</p>
-        <p>When I’m not coding, you can find me exploring coffee spots, reading about design, or contributing to open‑source.</p>
+        <p>Ja sam Backend Developer fokusiran na izgradnju robusnih, skalabilnih i efikasnih serverskih aplikacija. Imam snažne osnove u Java, C/C++ i Python jezicima, sa strašću prema unutrašnjosti baza podataka i dizajnu sistema.</p>
+        <p>Moj pristup podrazumeva rešavanje kompleksnih problema čistim, održivim kodom i optimizaciju performansi tamo gde je to najbitnije. Uživam u istraživanju kako stvari rade "ispod haube", od engine-a baza podataka do operativnih sistema.</p>
       </div>
     </div>
   </section>
 
   <section id="contact" class="section alt">
     <div class="section-header">
-      <h2>Contact</h2>
-      <p>Have an opportunity or just want to say hi? Let’s talk.</p>
+      <h2>Kontakt</h2>
+      <p>Imate priliku za saradnju ili samo želite da se javite? Pišite mi.</p>
     </div>
     <form class="contact-form" name="contact" netlify>
       <div class="grid two">
         <label>
-          <span>Name</span>
+          <span>Ime</span>
           <input required name="name" autocomplete="name" />
         </label>
         <label>
@@ -145,10 +142,10 @@
         </label>
       </div>
       <label>
-        <span>Message</span>
+        <span>Poruka</span>
         <textarea required name="message" rows="6"></textarea>
       </label>
-      <button class="btn primary" type="submit">Send</button>
+      <button class="btn primary" type="submit">Pošalji</button>
     </form>
   </section>
 </main>
